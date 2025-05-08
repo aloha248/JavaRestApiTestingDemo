@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <Configuration status="WARN">
+            <Appenders>
+                <Console name="ConsoleAppender" target="SYSTEM_OUT">
+                    <PatternLayout>
+                        <Pattern>%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %logger{36} - %msg%n</Pattern>
+                    </PatternLayout>
+                </Console>
+            </Appenders>
+            <Loggers>
+                <!-- Filter Spring logs -->
+                <Logger name="org.springframework" level="error" additivity="false">
+                    <AppenderRef ref="ConsoleAppender" />
+                </Logger>
+                <!-- Filter Hibernate logs -->
+                <Logger name="org.hibernate" level="warn" additivity="false">
+                    <AppenderRef ref="ConsoleAppender" />
+                </Logger>
+                <!-- Application-specific logs -->
+                <Root level="info">
+                    <AppenderRef ref="ConsoleAppender" />
+                </Root>
+            </Loggers>
+        </Configuration>
