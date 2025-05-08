@@ -1,4 +1,4 @@
-package ro.shiftleft.apiTestingDemo.constants;
+package ro.shiftleft.apiTestingDemo.apiClient;
 
 public enum Endpoints {
     USERS("/users"),
