@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import ro.shiftleft.apiTestingDemo.TestBase;
 import ro.shiftleft.apiTestingDemo.assertions.HttpResponseAsserts;
-import ro.shiftleft.apiTestingDemo.constants.Endpoints;
+import ro.shiftleft.apiTestingDemo.apiClient.Endpoints;
 import ro.shiftleft.apiTestingDemo.models.posts.Post;
 import ro.shiftleft.apiTestingDemo.utils.CollectionUtils;
 import ro.shiftleft.apiTestingDemo.utils.JsonUtils;
@@ -16,7 +16,7 @@ import java.io.IOException;
 import static ro.shiftleft.apiTestingDemo.assertions.ObjectAsserts.assertThat;
 
 @SpringBootTest
-public class GetPostById extends TestBase {
+public class GetPostByIdTest extends TestBase {
 
     private Post existingPost;
 

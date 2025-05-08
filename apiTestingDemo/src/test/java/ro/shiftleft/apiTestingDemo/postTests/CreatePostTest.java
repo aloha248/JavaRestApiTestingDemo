@@ -6,8 +6,8 @@ import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import ro.shiftleft.apiTestingDemo.TestBase;
+import ro.shiftleft.apiTestingDemo.apiClient.Endpoints;
 import ro.shiftleft.apiTestingDemo.assertions.HttpResponseAsserts;
-import ro.shiftleft.apiTestingDemo.constants.Endpoints;
 import ro.shiftleft.apiTestingDemo.models.posts.Post;
 import ro.shiftleft.apiTestingDemo.utils.JsonUtils;
 
@@ -17,9 +17,9 @@ import java.net.http.HttpResponse;
 import static ro.shiftleft.apiTestingDemo.assertions.ObjectAsserts.assertThat;
 
 @SpringBootTest
-public class CreatePost extends TestBase {
+public class CreatePostTest extends TestBase {
 
-    private static final Logger logger = LogManager.getLogger(CreatePost.class);
+    private static final Logger logger = LogManager.getLogger(CreatePostTest.class);
 
     @Test
     void createNewPost() throws IOException, InterruptedException {

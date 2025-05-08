@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import ro.shiftleft.apiTestingDemo.TestBase;
 import ro.shiftleft.apiTestingDemo.assertions.HttpResponseAsserts;
-import ro.shiftleft.apiTestingDemo.constants.Endpoints;
+import ro.shiftleft.apiTestingDemo.apiClient.Endpoints;
 import ro.shiftleft.apiTestingDemo.models.posts.Post;
 import ro.shiftleft.apiTestingDemo.utils.JsonUtils;
 
@@ -15,9 +15,9 @@ import java.io.IOException;
 import java.net.http.HttpResponse;
 
 @SpringBootTest
-public class GetPosts extends TestBase {
+public class GetPostsTest extends TestBase {
 
-    private static final Logger logger = LogManager.getLogger(GetPosts.class);
+    private static final Logger logger = LogManager.getLogger(GetPostsTest.class);
 
     @Test
     void getAllPosts() throws IOException, InterruptedException {
