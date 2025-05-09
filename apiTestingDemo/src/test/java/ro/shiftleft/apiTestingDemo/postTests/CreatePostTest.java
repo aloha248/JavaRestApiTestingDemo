@@ -34,16 +34,11 @@ public class CreatePostTest extends TestBase {
         HttpResponse response = apiClient.post(Endpoints.POSTS, newPost);
 
         // Assert the response status code is 201 (Created)
-        assertThat(response.statusCode())
-                .isEqualTo(HttpStatus.SC_CREATED);
-
         HttpResponseAsserts.assertThat(response)
                 .hasStatusCode(201);
 
-        // Deserialize the response body to a Post object
-        Post createdPost = JsonUtils.deserialize(response, Post.class);
-
         // Assert that the fields of newPost and createdPost are equivalent
+        Post createdPost = JsonUtils.deserialize(response, Post.class);
         assertThat(createdPost)
                 .isEquivalentTo(newPost);
     }
